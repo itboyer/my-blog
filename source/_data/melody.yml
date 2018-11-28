@@ -15,17 +15,19 @@ theme_color:
 # Main menu navigation
 # ---------------
 menu:
-  Home: /
-  Archives: /archives
-  Tags: /tags
-  Categories: /categories
-  My life: /shenghuo
-  photo: /photo
+  首页: /
+  日志: /archives
+  标签: /tags
+  目录: /categories
+  生活: /shenghuo
+  相册: /photo
+  关于: /about
   #XXX: /xxx
 
 # Favicon
 # ---------------
 favicon: /melody-favicon.ico
+
 
 # PWA
 # See https://github.com/JLHwung/hexo-offline
@@ -68,7 +70,10 @@ algolia_search:
 # Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/#/third-party-support?id=local-search
 # ---------------
 local_search:
-  enable: false
+  enable: true
+  labels:
+    input_placeholder: Search for Posts
+    hits_empty: "We didn't find any results for the search: ${query}"
 
 # MathJax
 # Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/#/third-party-support?id=mathjax
@@ -120,7 +125,7 @@ scripts:
 cdn:
   css:
     fontawesome: https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css
-    custom_css: /css/custom.css?version=10.1
+    custom_css: /css/custom.css?version=10.2.15
     # fontawesomeV5: https://use.fontawesome.com/releases/v5.3.1/css/all.css
     
   js:
@@ -129,7 +134,9 @@ cdn:
     fancybox: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js
     velocity: https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js
     velocity-ui: https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js
-    custom_js: /js/custom.js?version=10.1
+    custom_js: /js/custom.js?version=10.2.16
+    #canvas-nest: /js/canvas-nest.min.js?version=10.2.5
+    particle: /js/particle.min.js
     
 # Post info settings
 # ---------------
@@ -146,7 +153,7 @@ post_meta:
 
 # Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/#/additional-package-support?id=word-counting
 wordcount:
-  enable: false
+  enable: true
 
 toc:
   enable: true
@@ -159,7 +166,7 @@ post_copyright:
 
 # Please see doc for more details: https://molunerfinn.com/hexo-theme-melody-doc/#/theme-config?id=auto-excerpt
 auto_excerpt:
-  enable: true
+  enable: false
   length: 150
 
 # slide
@@ -182,9 +189,16 @@ slide:
 # - itemlist:
 #     img:
 #     text:
+QR_code:
+  - itemlist:
+      img: /img/AliPayQR.png
+      text: 支付宝打赏
+  - itemlist:
+      img: /img/WeChatQR.png 
+      text: 微信打赏
 
-# adv:
-# enable: false
+adv:
+  enable: true
 # info:
 
 # Share System
@@ -193,9 +207,9 @@ addThis:
   enable: false
   #pubid:
 
-# sharejs:
-# enable: false
-# disabled_sites:
+sharejs:
+  enable: true
+  disabled_sites: google
 
 # Comments System
 # ---------------
@@ -239,9 +253,22 @@ disqus:
 #   placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
 #   guest_info: nick,mail,link #valine comment header inf
 
+valine:
+  enable: true
+  appId: Sb3I3kxloC2uM8kp7GwsFXyN-gzGzoHsz
+  appKey: k6Jad1ggWtw42O55GAAMbFdu
+  notify: false
+  verify: false
+  placeholder: ヾﾉ≧∀≦)o来啊，快活啊! 
+  guest_info: nick,mail,link
+  pageSize: 10
+  lang: zh-cn
+  avatar: robohash
+
+
 # Footer Settings
 # ---------------
-since: 2013
+since: 2018
 
 # footer_custom_text:
 
